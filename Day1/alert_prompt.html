@@ -1,0 +1,44 @@
+
+<script>
+    // alert("Haat bhai");
+    // console.log("this is a simple log")
+    // console.error("this is an error log")// error
+    // console.warn("this is an error log") //warning
+    // prompt("Enter your name")
+
+let day  = prompt("enter day number from 1 to 7");
+
+switch (parseInt(day)){
+    case 1 :
+        console.log("mon");
+        break;
+    case 2 :
+        console.log("tue");
+        break;
+    case 3 :
+        console.log("wed");
+        break;
+    case 4 :
+        console.log("thrus");
+        break;
+    case 5 :
+        console.log("fri");
+        break;
+    case 6 :
+        console.log("sat");
+        break;
+    case 7 :
+        console.log("sun");
+        break;
+    default :
+        console.log("Enlighted day")
+
+}
+
+let fname = prompt("enter first name");
+let lname = prompt("enter last name");
+document.write("welcome " , fname , " ", lname , " !")
+let msg = "welcome " + fname + " " +  lname + " !"
+alert(msg);
+
+</script>
