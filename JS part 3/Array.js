@@ -1,4 +1,5 @@
 //Arrays are mutuable
+
 let name = "rohit";
 console.log(name[0]);
 console.log(name[4]);
