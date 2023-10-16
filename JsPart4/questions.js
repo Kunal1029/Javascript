@@ -45,4 +45,18 @@ for(let i=1;i<=5;i++){
 console.log(f)
 
 
+//Q5 - largest number in an aray with only +ve numbers
+// 
+// let arr2 = [2,45,3,23,-65,43]
+let arr2 = [2,45,3,23,65,43]
+let max = arr2[0];
+for(let i = 0;i<arr2.length ; i++){
+    if(arr2[i] > max){
+        max = arr2[i]
+    }
+}
+console.log("largest number in array is ",max)
+
+
+
 
