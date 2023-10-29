@@ -29,3 +29,4 @@ for(let i = 1;i<=5;i++){
 }
 
 // console.log(i) // err - coz can't access any variable outside block
+
