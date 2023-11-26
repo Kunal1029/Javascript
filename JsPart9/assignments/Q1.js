@@ -22,4 +22,19 @@ input.setAttribute("placeholder" , "user ka naam")
 let butn = document.querySelector("#btn")
 butn.classList.add("btnstyle")
 
+//h1
+let h1 = document.createElement('h1')
+h1.innerText = "DOM Practice"
+
+document.querySelector('body').append(h1)
+
+h1.classList.add('purple')
+
+
+let p = document.createElement('p')
+p.innerHTML = "Apna College<b> Delta </b>Practice";
+
+// p.classList.add("bold")
+
+document.querySelector('body').append(p)
 
