@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="type something" />
+    <button>Click ME</button>
+
+    <script>
+      let btn = document.querySelector("button");
+      // btn.addEventListener('click',function(event){ //event - shows us which event is call
+      //     console.log('hi')
+      //     console.log(event)
+      // })
+      // btn.addEventListener("dblclick" , function(event){
+      //     console.log(event);
+      //     console.log("click");
+      // })
+
+      let inp = document.querySelector("input");
+      // inp.addEventListener('keydown',function(event){
+      //     // console.log(event)
+      //     console.log("key name : ",event.key)
+      //     console.log("key code = ",event.code)
+      //     console.log("Keyboard key press")
+      // })
+      // inp.addEventListener('keyup',function(event){ // this wait to key for complete press
+      //     // console.log(event)
+      //     console.log("key name : ",event.key)
+      //     console.log("key code = ",event.code)
+      //     console.log("Keyboard key press")
+      // })
+
+      //game keyboard set up of arrow keys
+      inp.addEventListener("keydown", function (event) {
+        console.log("code ", event.code);
+        if (event.code == "ArrowUp") {
+          console.log("Arrow moves up");
+        } else if (event.code == "ArrowDown") {
+          console.log("Arrow moves down");
+        } else if (event.code == "ArrowLeft") {
+          console.log("Arrow moves Left");
+        } else if (event.code == "ArrowRight") {
+          console.log("Arrow moves Right");
+        }
+        //  by using alphabet
+
+        else if(event.code == "KeyW"){
+            console.log("Arrow moves up")
+        }
+        else if(event.code == "KeyS"){
+            console.log("Arrow moves down")
+        }
+        else if(event.code == "KeyA"){
+            console.log("Arrow moves Left")
+        }
+        else if(event.code == "KeyD"){
+            console.log("Arrow moves Right")
+        }
+      });
+    </script>
+  </body>
+</html>

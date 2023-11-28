@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .bg{
+        background-color: red;
+    }
+  </style>
+  <body>
+
+    <h1>On clicked</h1>
+    <button>Click Me</button>
+    <button>Like Me</button>
+
+    <script>
+      //Event listner - we cannot use any function mutliple times from onclick so we need eventlistener for this
+      //addEventListener
+
+      //syntax
+      //   Element.addEventListener(event, callback)
+      //   btn.addEventListener("click", function(){
+      //     console.log("button clicked");
+      //   });
+
+      let btns = document.querySelectorAll("button");
+      for (btn of btns) {
+        // btn.addEventListener("click",sayHelo);
+        // btn.addEventListener("click",sayName);
+        btn.addEventListener("dblclick",link);
+      }
+    
+    
+      function sayHelo(){
+        alert("Hello !")
+      }
+      function sayName(){
+        alert("KS")
+      }
+      function link(){
+        alert("Go to this link - https://developer.mozilla.org/en-US/docs/Web/API/Event")
+      }
+
+      let h1 = document.querySelector('h1')
+      h1.addEventListener("click",function(){
+        h1.classList.add('bg')
+      })
+      //we can use event listner for all elements
+
+    </script>
+  </body>
+</html>
