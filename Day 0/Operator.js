@@ -31,11 +31,12 @@ console.log("null - value represents the intentional absence of any object value
 let ps = null;
 console.log(ps);
 let year = null;
-console.log(typeof year);
+console.log(typeof year); //typeof operator incorrectly returns "object" for null.
 
 
 //length of empty string?
 let str = "";
 let str1 = " ";
 console.log(str.length)
+console.log(typeof str)
 console.log(str1.length)

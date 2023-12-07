@@ -25,7 +25,7 @@ console.log(typeof k);
 //assignment operator 
 // a += b;, a-=b, a*=b, a/=b; a%=b;
 console.log("Assignment operator , here a and b is operands , and +,-,/,*,% are binary operators");
-let a =10;
+let a = 10;
 let b = 2, c =3;
 console.log(a+=b)
 console.log(a-=b)

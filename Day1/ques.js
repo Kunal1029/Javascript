@@ -67,4 +67,14 @@ if(parseInt(num1[num1.length-1]) === parseInt(num2[num2.length-1]))
 else{
     document.write("Last digit  r not same")
 }
+// or
+// let num1 = prompt("for Q6 enter any number")
+// let num2 = prompt("for Q6 enter another number")
+// if(parseInt(num1%10) == parseInt(num2%10))
+// {
+//     document.write("Last digit are same")
+// }
+// else{
+//     document.write("Last digit  r not same")
+// }
 
