@@ -28,7 +28,19 @@ function levelup() {
   gameFlash(randbtn);
 }
 
-
+// let btncount = 0;
+// let kk = document.querySelectorAll(".btn");
+// for (kk1 of kk) {
+//   kk1.addEventListener("click", function (event) {
+//     ++btncount;
+//     if(level == 0 && btncount < 1){
+//         console.log(btncount);
+   
+//     }
+   
+//   });
+// }
+// console.log(btncount);
 if (level == 0) {
   document.addEventListener("keypress", function () {
     if (started == false) {

@@ -1,0 +1,52 @@
+<!-- Promises - then() & catch() -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Promise object have two methods (then & catch) -->
+
+    <!-- if we want to do some task after Fullfilled state comes in promise so we use "then" methon -->
+    <!-- if reject state in promise so we use catch method which catch error of rejection-->
+    <h1>then and catch</h1>
+  </body>
+
+  <script>
+    function savetoDb(data) {
+      return new Promise((success,failure) => {
+        // promise(resolve , reject)
+        let internetSpeed = Math.floor(Math.random() * 10) + 1;
+        if (internetSpeed > 4) {
+          success("success : data was saved");
+        } else {
+          failure("failure : weak connection");
+        }
+      });
+    }
+
+    //   let request = savetoDb("apna college"); //req = promise object
+    //   request.then(() =>{
+    //     console.log("promise was resolved")
+    //     console.log(request)
+    //   })
+    //   .catch(()=>{
+    //     console.log("promise was rejected")
+    //     console.log(request);
+    //   });
+
+    // or
+
+    
+    savetoDb("ks")
+      .then(() => {
+        console.log("promise was resolved");
+      })
+      .catch(() => {
+        console.log("promise was rejected");
+      });
+
+  </script>
+</html>

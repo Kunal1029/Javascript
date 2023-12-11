@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Promises  -->
+    <h1>
+      Promises - The Promise object represents the eventual completion (or
+      failure) of an asynchronous operation and its resulting value
+    </h1>
+    <p>Promises have 2 things - resolve (for success) & reject (reject)</p>
+    <p>Promise - Have 3 states (pending , rejected , fulfilled)</p>
+    <script>
+      //   function savetoDb(data, success, failure) { // asynchronous function which output depends upon many things like this func depends on internetspeed
+      //     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+      //     if (internetSpeed > 4) {
+      //       success();
+      //     } else {
+      //       failure();
+      //     }
+      //   }
+    //   savetoDb(
+    //     "Kunal Shivhare",
+    //     () => {
+    //       console.log("success : Data is saved");
+    //       savetoDb(
+    //         "KS",
+    //         () => {
+    //           console.log("success ks : Data is saved");
+    //           savetoDb(
+    //             "PS",
+    //             () => {
+    //               console.log("success ps : Data is saved");
+    //             },
+    //             () => {
+    //               console.log("Failure ps : Error");
+    //             }
+    //           );
+    //         },
+    //         () => {
+    //           console.log("Failure ks : Error");
+    //         }
+    //       );
+    //     },
+    //     () => {
+    //       console.log("Failure : Error");
+    //     }
+    //   );
+
+      function savetoDb(data) {
+        return new Promise((failure, success) => { // promise(resolve , reject)
+          let internetSpeed = Math.floor(Math.random() * 10) + 1;
+          if (internetSpeed > 4) {
+            success("success : data was saved");
+          } else {
+            failure("failure : weak connection");
+          }
+        });
+      }
+
+      savetoDb("Hi")
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Promises - Improved version (we use nested then)-->
+
+    <script>
+      function savetoDb(data) {
+        return new Promise((success, failure) => {
+          // promise(resolve , reject)
+          let internetSpeed = Math.floor(Math.random() * 10) + 1;
+          if (internetSpeed > 4) {
+            success("success : data was saved");
+          } else {
+            failure("failure : weak connection");
+          }
+        });
+      }
+
+      //   savetoDb("ks")
+      //     .then(() => {
+      //       console.log("promise was resolved");
+      //       savetoDb("Hello World")
+      //       .then(()=>{
+      //         console.log("data2 saved")
+      //       })
+      //     })
+      //     .catch(() => {
+      //       console.log("promise was rejected");
+      //     });
+
+      // improved version
+
+      savetoDb("ks")
+        .then(() => {
+          console.log("promise was resolved");
+          return savetoDb("Data2 saved");
+        })
+        .then(() => {
+          console.log("data2 saved");
+        })
+        .then(()=>{
+            console.log("data3 saved")
+        })
+        .catch(() => {
+          console.log("promise was rejected");
+        });
+    </script>
+  </body>
+</html>
