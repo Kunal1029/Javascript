@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const url = "https://icanhazdadjoke.com/";
+
+        async function getJokes(){
+            try {
+               const config = { headers: {Accept: "application/json"}}//without this we r not able to get data in json
+
+                let res = await axios.get(url, config);
+                console.log(res.data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</body>
+</html>

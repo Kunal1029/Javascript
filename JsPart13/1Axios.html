@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h1>Get random cat facts</h1>
+    <button>Show facts</button>
+    <p id="result"></p>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script>
+
+      // Axios - It is alibrary which helps to create http request.
+      //This used fetch method internally
+      //Axios github
+
+      let btn = document.querySelector("button")
+
+      btn.addEventListener("click" , async ()=>{
+        let fact = await getFacts();//if we dont use async await here then we will get promise in return , for getting fact we need to make async function and await 
+        console.log(fact);
+        let p = document.querySelector("#result");
+        p.innerText = fact;
+      })
+      let url = "https://catfact.ninja/fact";
+
+      // we modified getFacts() method from 7fetchwith_async.js file , and use axios instead fetch
+      //we modified coz In fetch we need to parse data for getting in json format but axios give data in jsan without pasrsing.
+      
+      async function getFacts() {
+        try {
+          let res = await axios.get(url);
+        //   console.log(res.data.fact);
+        return res.data.fact;
+        } catch (e) {
+          console.log("error : ", e);
+          return "No Fact Found"
+        }
+      }
+    </script>
+  </body>
+</html>
