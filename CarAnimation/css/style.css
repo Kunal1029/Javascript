@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    animation: bodyshake linear 300s infinite;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-repeat: repeat;
+    background-position: center;
+    /* background-size: cover; */
+    background-image: url('../images/background.jpg');
+    /* animation: skymove linear 300s infinite; */
+}
+.trees{
+    height: 100vh;
+    width: 800vw;
+    background-image: url('../images/trees.png');
+    /* background-size: cover; */
+    background-repeat: repeat;
+    position: absolute;
+    top: 44px;
+    animation: skymove linear 300s infinite;
+
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url('../images/track.png');
+    /* background-size: cover; */
+    position: absolute;
+    top: 75vh;
+    background-repeat: repeat-x;
+    animation: carmove linear 3s infinite;
+}
+.car{
+    height: 100px;
+    width: 400px;
+    background-image: url("../images/car_body.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 25vh;
+    left: 60vh;
+    animation: shake 1s infinite;
+}
+
+.wheel1 img{
+    width: 74px;
+    position: relative;
+    top: 45px;
+    left: 48px;
+    animation: wheelrotation linear .1s infinite;
+}
+.wheel2 img{
+    width: 74px;
+    position: relative;
+    bottom: 32px;
+    left: 250px;
+    animation: wheelrotation linear .1s infinite;
+}
+
+@keyframes wheelrotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes carmove{
+    100%{
+        transform: translate(-500vw);
+    }
+}
+@keyframes shake{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    0%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes bodyshake{
+    0%{
+        transform: translateY(50px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    0%{
+        transform: translateY(50px);
+    }
+}
+@keyframes skymove{
+    100%{
+        transform: translate(-500vw);
+    }
+}
