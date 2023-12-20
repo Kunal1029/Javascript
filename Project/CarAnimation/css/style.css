@@ -59,7 +59,7 @@ body{
 .wheel2 img{
     width: 74px;
     position: relative;
-    bottom: 32px;
+    bottom: 32px; 
     left: 250px;
     animation: wheelrotation linear .1s infinite;
 }
