@@ -20,3 +20,4 @@ btn2.addEventListener("click" , ()=>{
     document.querySelector("body").style.backgroundColor = "black";
     document.querySelector(".light").style.color = "white";
 })
+

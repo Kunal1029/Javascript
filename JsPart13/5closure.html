@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Clouser</h1>
+    <p>Clouser is a feature in js where an inner function has access to the outer (enclosing) function's variables</p>
+    <p>In JS , once a function completes its execution, any variable that were defined inside the function scope cease to exist. (variable -> new variable creates )</p>
+    <p>meaning it retains access to x even after outerFunction has completed its execution.</p>
+    <script>
+        function outer(){
+            let b = 10;
+            function inner(){
+                let a = 20;
+                console.log(a+b);
+                console.log(b);
+            }
+            return inner;
+        }
+        let inner = outer();
+        inner();
+    </script>
+</body>
+</html>
